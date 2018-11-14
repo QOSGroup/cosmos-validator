@@ -1,2 +1,2 @@
 # cosmos-validator
-cosmos validator 
+cosmos validator
