@@ -1,825 +1,579 @@
-<html lang="en" class="md-theme-default">
-
-<head>
-  <meta charset="utf-8">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>validator.network</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.5,user-scalable=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,300italic,400italic">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-  <link as="style" href="/css/app.c66bb1ab.css" rel="preload">
-  <link as="style" href="/css/chunk-vendors.c3497cc6.css" rel="preload">
-  <link as="script" href="/js/app.f1b98a59.js" rel="preload">
-  <link as="script" href="/js/chunk-vendors.3c57347a.js" rel="preload">
-  <link href="/css/1.2d037092.css" rel="prefetch">
-  <link href="/js/1.912c0abb.js" rel="prefetch">
-  <link href="/js/2.3c2c9587.js" rel="prefetch">
-  <link href="/js/3.bf33d844.js" rel="prefetch">
-  <link href="/css/chunk-vendors.c3497cc6.css" rel="stylesheet">
-  <link href="/css/app.c66bb1ab.css" rel="stylesheet">
-  <style type="text/css">
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .fadeIn {
-      animation-name: fadeIn;
-    }
-
-    @keyframes fadeOut {
-      from {
-        opacity: 1;
-      }
-
-      to {
-        opacity: 0;
-      }
-    }
-
-    .fadeOut {
-      animation-name: fadeOut;
-    }
-
-    .fade-move {
-      transition: transform .3s ease-out;
-    }
-  </style>
-  <style type="text/css">
-    .zoom-move {
-      transition: transform .3s ease-out;
-    }
-
-    @keyframes zoomIn {
-      from {
-        opacity: 0;
-        transform: scale3d(0.3, 0.3, 0.3);
-      }
-
-      50% {
-        opacity: 1;
-      }
-    }
-
-    .zoomIn {
-      animation-name: zoomIn;
-    }
-
-    @keyframes zoomOut {
-      from {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-        transform: scale3d(0.3, 0.3, 0.3);
-      }
-
-      to {
-        opacity: 0;
-      }
-    }
-
-    .zoomOut {
-      animation-name: zoomOut;
-    }
-  </style>
-  <style type="text/css">
-    .zoom-move {
-      transition: transform .3s ease-out;
-    }
-
-    @keyframes zoomInX {
-      from {
-        opacity: 0;
-        transform: scaleX(0);
-      }
-
-      50% {
-        opacity: 1;
-      }
-    }
-
-    .zoomInX {
-      animation-name: zoomInX;
-    }
-
-    @keyframes zoomOutX {
-      from {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-        transform: scaleX(0);
-      }
-
-      to {
-        opacity: 0;
-      }
-    }
-
-    .zoomOutX {
-      animation-name: zoomOutX;
-    }
-  </style>
-  <style type="text/css">
-    .zoom-move {
-      transition: transform .3s ease-out;
-    }
-
-    @keyframes zoomInY {
-      from {
-        opacity: 0;
-        transform: scaleY(0);
-      }
-
-      50% {
-        opacity: 1;
-        tranform: scaleY(1);
-      }
-    }
-
-    .zoomInY {
-      animation-name: zoomInY;
-    }
-
-    @keyframes zoomOutY {
-      from {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0;
-        transform: scaleY(0);
-      }
-
-      to {
-        opacity: 0;
-      }
-    }
-
-    .zoomOutY {
-      animation-name: zoomOutY;
-    }
-  </style>
-  <style type="text/css">
-    .collapse-move {
-      transition: transform .3s ease-in-out;
-    }
-  </style>
-  <style type="text/css">
-    @keyframes scaleIn {
-      from {
-        opacity: 0;
-        transform: scale(0)
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .scaleIn {
-      animation-name: scaleIn;
-    }
-
-    @keyframes scaleOut {
-      from {
-        opacity: 1;
-      }
-
-      to {
-        opacity: 0;
-        transform: scale(0);
-      }
-    }
-
-    .scaleOut {
-      animation-name: scaleOut;
-    }
-
-    .scale-move {
-      transition: transform .3s cubic-bezier(.25, .8, .50, 1);
-    }
-  </style>
-  <style type="text/css">
-    .slide-move {
-      transition: transform .3s;
-    }
-
-    @keyframes slideYIn {
-      from {
-        opacity: 0;
-        transform: translateY(-15px);
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .slideYIn {
-      animation-name: slideYIn;
-    }
-
-    @keyframes slideYOut {
-      from {
-        opacity: 1;
-      }
-
-      to {
-        opacity: 0;
-        transform: translateY(-15px);
-      }
-    }
-
-    .slideYOut {
-      animation-name: slideYOut;
-    }
-  </style>
-  <style type="text/css">
-    .slide-move {
-      transition: transform .3s;
-    }
-
-    @keyframes slideYDownIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .slideYDownIn {
-      animation-name: slideYDownIn;
-    }
-
-    @keyframes slideYDownOut {
-      from {
-        opacity: 1;
-      }
-
-      to {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-    }
-
-    .slideYDownOut {
-      animation-name: slideYDownOut;
-    }
-  </style>
-  <style type="text/css">
-    .slide-move {
-      transition: transform .3s;
-    }
-
-    @keyframes slideXLeftIn {
-      from {
-        opacity: 0;
-        transform: translateX(-15px);
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .slideXLeftIn {
-      animation-name: slideXLeftIn;
-    }
-
-    @keyframes slideXLeftOut {
-      from {
-        opacity: 1;
-      }
-
-      to {
-        opacity: 0;
-        transform: translateX(-15px);
-      }
-    }
-
-    .slideXLeftOut {
-      animation-name: slideXLeftOut;
-    }
-  </style>
-  <style type="text/css">
-    .slide-move {
-      transition: transform .3s;
-    }
-
-    @keyframes slideXRightIn {
-      from {
-        opacity: 0;
-        transform: translateX(15px);
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .slideXRightIn {
-      animation-name: slideXRightIn;
-    }
-
-    @keyframes slideXRightOut {
-      from {
-        opacity: 1;
-      }
-
-      to {
-        opacity: 0;
-        transform: translateX(15px);
-      }
-    }
-
-    .slideXRightOut {
-      animation-name: slideXRightOut;
-    }
-  </style>
-  <style type="text/css">
-    @import url(https://fonts.googleapis.com/css?family=Ruda);
-  </style>
-  <style type="text/css">
-    .my-gallery a img {
-      float: left;
-      width: 20%;
-      height: auto;
-      border: 2px solid #fff;
-      transition: transform .15s ease;
-      position: relative
-    }
-
-    .my-gallery a:hover img {
-      transform: scale(1.05);
-      z-index: 5
-    }
-
-    .my-gallery a.big img {
-      width: 40%
-    }
-
-    .align-center {
-      text-align: center
-    }
-  </style>
-  <style type="text/css">
-    body.hidden-scroll {
-      overflow: hidden
-    }
-
-    .sl-overlay {
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: #fff;
-      opacity: .7;
-      display: none;
-      z-index: 1050
-    }
-
-    .sl-wrapper {
-      z-index: 1040
-    }
-
-    .sl-wrapper button {
-      border: 0 none;
-      background: transparent;
-      font-size: 28px;
-      padding: 0;
-      cursor: pointer
-    }
-
-    .sl-wrapper button:hover {
-      opacity: .7
-    }
-
-    .sl-wrapper .sl-close {
-      display: none;
-      position: fixed;
-      right: 30px;
-      top: 30px;
-      z-index: 1060;
-      margin-top: -14px;
-      margin-right: -14px;
-      height: 44px;
-      width: 44px;
-      line-height: 44px;
-      font-family: Arial, Baskerville, monospace;
-      color: #000;
-      font-size: 3rem
-    }
-
-    .sl-wrapper .sl-close:focus {
-      outline: none
-    }
-
-    .sl-wrapper .sl-counter {
-      display: none;
-      position: fixed;
-      top: 30px;
-      left: 30px;
-      z-index: 1060;
-      color: #000;
-      font-size: 1rem
-    }
-
-    .sl-wrapper .sl-navigation {
-      width: 100%;
-      display: none
-    }
-
-    .sl-wrapper .sl-navigation button {
-      position: fixed;
-      top: 50%;
-      margin-top: -22px;
-      height: 44px;
-      width: 22px;
-      line-height: 44px;
-      text-align: center;
-      display: block;
-      z-index: 1060;
-      font-family: Arial, Baskerville, monospace;
-      color: #000
-    }
-
-    .sl-wrapper .sl-navigation button.sl-next {
-      right: 5px;
-      font-size: 2rem
-    }
-
-    .sl-wrapper .sl-navigation button.sl-prev {
-      left: 5px;
-      font-size: 2rem
-    }
-
-    .sl-wrapper .sl-navigation button:focus {
-      outline: none
-    }
-
-    @media (min-width:35.5em) {
-      .sl-wrapper .sl-navigation button {
-        width: 44px
-      }
-
-      .sl-wrapper .sl-navigation button.sl-next {
-        right: 10px;
-        font-size: 3rem
-      }
-
-      .sl-wrapper .sl-navigation button.sl-prev {
-        left: 10px;
-        font-size: 3rem
-      }
-    }
-
-    @media (min-width:50em) {
-      .sl-wrapper .sl-navigation button {
-        width: 44px
-      }
-
-      .sl-wrapper .sl-navigation button.sl-next {
-        right: 20px;
-        font-size: 3rem
-      }
-
-      .sl-wrapper .sl-navigation button.sl-prev {
-        left: 20px;
-        font-size: 3rem
-      }
-    }
-
-    .sl-wrapper .sl-image {
-      position: fixed;
-      -ms-touch-action: none;
-      touch-action: none;
-      z-index: 10000
-    }
-
-    .sl-wrapper .sl-image img {
-      margin: 0;
-      padding: 0;
-      display: block;
-      border: 0 none
-    }
-
-    @media (min-width:35.5em) {
-      .sl-wrapper .sl-image img {
-        border: 0 none
-      }
-    }
-
-    @media (min-width:50em) {
-      .sl-wrapper .sl-image img {
-        border: 0 none
-      }
-    }
-
-    .sl-wrapper .sl-image iframe {
-      background: #000;
-      border: 0 none
-    }
-
-    @media (min-width:35.5em) {
-      .sl-wrapper .sl-image iframe {
-        border: 0 none
-      }
-    }
-
-    @media (min-width:50em) {
-      .sl-wrapper .sl-image iframe {
-        border: 0 none
-      }
-    }
-
-    .sl-wrapper .sl-image .sl-caption {
-      display: none;
-      padding: 10px;
-      color: #fff;
-      background: rgba(0, 0, 0, .8);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0
-    }
-
-    .sl-wrapper .sl-image .sl-caption.pos-top {
-      bottom: auto;
-      top: 0
-    }
-
-    .sl-wrapper .sl-image .sl-caption.pos-outside {
-      bottom: auto
-    }
-
-    .sl-wrapper .sl-image .sl-download {
-      display: none;
-      position: absolute;
-      bottom: 5px;
-      right: 5px;
-      color: #000;
-      z-index: 1060
-    }
-
-    .sl-spinner {
-      display: none;
-      border: 5px solid #333;
-      border-radius: 40px;
-      height: 40px;
-      left: 50%;
-      margin: -20px 0 0 -20px;
-      opacity: 0;
-      position: fixed;
-      top: 50%;
-      width: 40px;
-      z-index: 1007;
-      animation: pulsate 1s ease-out infinite
-    }
-
-    .sl-scrollbar-measure {
-      position: absolute;
-      top: -9999px;
-      width: 50px;
-      height: 50px;
-      overflow: scroll
-    }
-
-    @keyframes pulsate {
-      0% {
-        transform: scale(.1);
-        opacity: 0
-      }
-
-      50% {
-        opacity: 1
-      }
-
-      to {
-        transform: scale(1.2);
-        opacity: 0
-      }
-    }
-  </style>
-  <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cosmos Validator</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Cosmos Validator">
+    <link rel="canonical" href="index.html">
+
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-<body class="sidebar-mini">
-  <div data-v-9de9b280="" id="top" class="full-page patternbg">
-    <div data-v-9de9b280="" class="md-toolbar md-primary md-toolbar-absolute md-theme-default md-elevation-0">
-      <div data-v-9de9b280="" class="md-toolbar-row md-offset">
-        <div data-v-9de9b280="" class="md-toolbar-section-start"><img data-v-9de9b280="" src="img/logo_white_green.svg"
-            class="logo"></div>
-        <div data-v-9de9b280="" class="md-toolbar-section-end"><button data-v-9de9b280="" type="button" class="md-button md-just-icon md-simple md-round md-toolbar-toggle md-theme-default">
-            <div class="md-ripple">
-              <div class="md-button-content"><span data-v-9de9b280="" class="icon-bar"></span><span data-v-9de9b280=""
-                  class="icon-bar"></span><span data-v-9de9b280="" class="icon-bar"></span></div>
-            </div>
-          </button>
-          <div data-v-9de9b280="" class="md-collapse">
-            <ul data-v-9de9b280="" class="md-list md-theme-default">
-              <li data-v-9de9b280="" class="md-list-item"><button data-v-9de9b280="" type="button" class="md-list-item-button md-list-item-container md-button-clean">
-                  <div class="md-list-item-content md-ripple"><i data-v-9de9b280="" class="md-icon md-icon-font md-theme-default">cloud_circle</i>
-                    Infrastructure
-                  </div>
-                </button></li>
-              <li data-v-9de9b280="" class="md-list-item"><button data-v-9de9b280="" type="button" class="md-list-item-button md-list-item-container md-button-clean">
-                  <div class="md-list-item-content md-ripple"><i data-v-9de9b280="" class="md-icon md-icon-font md-theme-default">show_chart</i>
-                    Delegation
-                  </div>
-                </button></li>
-              <li data-v-9de9b280="" class="md-list-item"><button data-v-9de9b280="" type="button" class="md-list-item-button md-list-item-container md-button-clean">
-                  <div class="md-list-item-content md-ripple"><i data-v-9de9b280="" class="md-icon md-icon-font md-theme-default">group</i>
-                    Team
-                  </div>
-                </button></li>
-              <li data-v-9de9b280="" class="md-list-item"><button data-v-9de9b280="" type="button" class="md-list-item-button md-list-item-container md-button-clean">
-                  <div class="md-list-item-content md-ripple"><i data-v-9de9b280="" class="md-icon md-icon-font md-theme-default">phone</i>
-                    Contact
-                  </div>
-                </button></li>
-              <li data-v-9de9b280="" class="md-list-item"><button data-v-9de9b280="" type="button" class="md-list-item-button md-list-item-container md-button-clean">
-                  <div class="md-list-item-content md-ripple"><i data-v-9de9b280="" class="md-icon md-icon-font md-theme-default">info</i>
-                    Terms of service
-                  </div>
-                </button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div data-v-9de9b280="" class="wrapper wrapper-full-page">
-      <div data-v-9de9b280="" filter-color="black" class="page-header header-filter section-page">
-        <div data-v-9de9b280="" class="container md-offset">
-          <div data-v-14ab9d62="" data-v-9de9b280="">
-            <div data-v-14ab9d62="" class="notifications"><span mode="in-out"></span></div>
-            <div data-v-14ab9d62="" id="home" class="md-layout">
-              <div data-v-14ab9d62="" class="md-layout-item">
-                <div data-v-14ab9d62="" class="md-card md-theme-default">
-                  <div data-v-14ab9d62="" class="md-card-header md-card-header-text md-card-header-green">
-                    <div data-v-14ab9d62="" class="card-text">
-                      <h2 data-v-14ab9d62="" class="title">What we do</h2>
-                    </div>
-                  </div>
-                  <div data-v-14ab9d62="" class="md-card-content">
-                    <p data-v-14ab9d62="">We provide a secure and highly available validator infrastructure for the <a
-                        data-v-14ab9d62="" href="https://cosmos.network">Cosmos Network</a> featuring:</p>
-                    <ul data-v-14ab9d62="">
-                      <li data-v-14ab9d62=""><img data-v-14ab9d62="" src="img/checkmark2.svg" class="checkmark">
-                        Proactive 24/7 monitoring and on-call personnel</li>
-                      <li data-v-14ab9d62=""><img data-v-14ab9d62="" src="img/checkmark2.svg" class="checkmark"> Secret
-                        key material secured by Hardware Security Modules</li>
-                      <li data-v-14ab9d62=""><img data-v-14ab9d62="" src="img/checkmark2.svg" class="checkmark"> Fully
-                        redundant hardware and co-location environment</li>
-                      <li data-v-14ab9d62=""><img data-v-14ab9d62="" src="img/checkmark2.svg" class="checkmark"> Fully
-                        redundant network connectivity with dedicated bandwidth</li>
-                      <li data-v-14ab9d62=""><img data-v-14ab9d62="" src="img/checkmark2.svg" class="checkmark"> High
-                        level of operational automation for scaling and predictability</li>
-                      <li data-v-14ab9d62=""><img data-v-14ab9d62="" src="img/checkmark2.svg" class="checkmark"> 20+
-                        years of IT operations experience</li>
-                    </ul>
-                    <p data-v-14ab9d62="">To completely align our interests with those of our delegators, we will be
-                      staking exclusively through our own service.</p>
-                    <p data-v-14ab9d62="">
-                      We have closely followed as well as participated in the development of the Cosmos software since
-                      early 2016. This has given
-                      us the opportunity to gain extensive operational experience and a deep understanding of the
-                      underlying technology.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div data-v-14ab9d62="" id="delegation" class="md-layout">
-              <div data-v-14ab9d62="" class="md-layout-item">
-                <div data-v-14ab9d62="" class="md-card md-theme-default">
-                  <div class="md-card-header md-card-header-text md-card-header-green">
-                    <div class="card-text">
-                      <h2 class="title">How to delegate</h2>
-                    </div>
-                  </div>
-                  <div class="md-card-content">
-                    <p>Before delegating to the address below, please <a href="#/terms-of-service" class="">review our
-                        terms of service</a> and make sure that you understand <a href="https://cosmos.network/docs/resources/delegator-faq.html">the
-                        risks associated with delegation</a>.</p>
-                    <p>Address: <span><span style="font-family: monospace;">cosmosvaloper1lc4jjw8zveuu<wbr>j3njhy70zl23vgmpds2xg830hn</span><button
-                            type="button" class="md-button md-icon md-black md-simple md-theme-default">
-                            <div class="md-ripple">
-                              <div class="md-button-content"><i class="md-icon md-icon-font button-icon md-theme-default">assignment</i></div>
-                            </div>
-                          </button></span></p>
-                    <p>Fee schedule: To be announced</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div data-v-14ab9d62="" id="team" class="md-layout">
-              <div data-v-14ab9d62="" class="md-layout-item">
-                <div data-v-14ab9d62="" class="md-card md-theme-default">
-                  <div class="md-card-header md-card-header-text md-card-header-green">
-                    <div class="card-text">
-                      <h2 class="title">Meet the team</h2>
-                    </div>
-                  </div>
-                  <div class="md-card-content">
-                    <div class="md-layout">
-                      <div class="md-layout-item md-size-100">
-                        <p>We are a highly skilled and dedicated team with decades of experience in the fields of
-                          software development, highly available IT infrastructure, cryptography and financial
-                          services.</p>
-                      </div>
-                      <div class="md-layout-item md-size-33 md-small-size-100">
-                        <h4>Martin Dyring-Andersen<br><small>CEO &amp; Co-founder</small></h4><img src="img/mda.jpg"
-                          class="img">
-                        <p></p>
-                      </div>
-                      <div class="md-layout-item md-size-33 md-small-size-100">
-                        <h4>Henrik Aasted Sørensen<br><small>CTO &amp; Co-founder</small></h4><img src="img/has.jpg"
-                          class="img">
-                        <p></p>
-                      </div>
-                      <div class="md-layout-item md-size-33 md-small-size-100">
-                        <h4>Marianne Schmidt Nellemann<br><small>COO &amp; Partner</small></h4><img src="img/msn.jpg"
-                          class="img">
-                        <p></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div data-v-14ab9d62="" class="md-layout">
-              <div data-v-14ab9d62="" class="md-layout-item">
-                <div data-v-14ab9d62="" class="md-card md-theme-default" id="contact">
-                  <div class="md-card-header md-card-header-text md-card-header-green">
-                    <div class="card-text">
-                      <h2 class="title">Get in touch</h2>
-                    </div>
-                  </div>
-                  <div class="md-card-content">
-                    <p>Reach out if you have any questions about our validator infrastructure, are interested
-                      in the latest updates or just want to have a chat.</p>
-                    <div class="md-layout-item md-size-100"><a href="https://twitter.com/validator_net" class="md-button md-simple md-twitter md-theme-default">
-                        <div class="md-ripple">
-                          <div class="md-button-content"><i class="fab fa-twitter"></i> @validator_net
-                          </div>
-                        </div>
-                      </a></div>
-                    <div class="md-layout-item md-size-100"><a href="https://t.me/block_finance" class="md-button md-simple md-twitter  md-theme-default">
-                        <div class="md-ripple">
-                          <div class="md-button-content"><i class="fab fa-telegram-plane"></i> Join our community chat
-                          </div>
-                        </div>
-                      </a></div>
-                    <div class="md-layout-item md-size-100"><a href="mailto:hello@validator.network" class="md-button md-simple md-twitter md-theme-default">
-                        <div class="md-ripple">
-                          <div class="md-button-content"><i class="fas fa-envelope"></i> Email us
-                          </div>
-                        </div>
-                      </a></div>
-                    <div class="md-layout-item md-size-100"><a href="https://goo.gl/maps/ZRXcyNyjKwR2" class="md-button md-simple md-twitter md-theme-default">
-                        <div class="md-ripple">
-                          <div class="md-button-content"><i class="fas fa-map-marker-alt"></i> Meet us in Copenhagen
-                          </div>
-                        </div>
-                      </a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer data-v-9de9b280="" class="footer">
-          <div data-v-9de9b280="" class="container md-offset">
-            <nav data-v-9de9b280="">
-              <ul data-v-9de9b280="">
-                <li data-v-9de9b280=""><a data-v-9de9b280="">Home</a></li>
-              </ul>
-            </nav>
-            <div data-v-9de9b280="" class="copyright text-center">
-              © 2018
-            </div>
-          </div>
-        </footer>
-      </div>
-    </div>
-  </div>
-  <script src="/js/chunk-vendors.3c57347a.js"></script>
-  <script src="/js/app.f1b98a59.js"></script>
-</body>
 
+    <body id="page-top" class="index">
+
+       <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html#page-top">Compass Validator</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="index.html#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="index.html#portfolio">Team</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="index.html#contact">Delegate</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/profile.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">Delegate Now</span>
+                        <hr class="star-light">
+                        <span class="skills">Secure - Highly available - For Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<!--
+        
+          
+        
+          
+        
+ -->
+`
+
+    
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Team</h2>
+                    <hr class="star-primary">
+            </div>
+            <div class="row">
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="index.html#portfolioModal-1" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/lijie.jpeg" class="img-responsive" alt="image-alt">
+                        </a>
+                    </div>
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="index.html#portfolioModal-2" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/gaoxiang.jpeg" class="img-responsive" alt="image-alt">
+                        </a>
+                    </div>
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="index.html#portfolioModal-3" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/zhouying.jpeg" class="img-responsive" alt="image-alt">
+                        </a>
+                    </div>
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="index.html#portfolioModal-6" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/shangyong.jpeg" class="img-responsive" alt="image-alt">
+                        </a>
+                    </div>
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="index.html#portfolioModal-4" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/yuanmu.jpeg" class="img-responsive" alt="image-alt">
+                        </a>
+                    </div>
+                
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="index.html#portfolioModal-5" class="portfolio-link" data-toggle="modal">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-search-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/zhangzheng.jpeg" class="img-responsive" alt="image-alt">
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+     <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>We have closely followed as well as participated in the development of the Cosmos software since early 2016. This has given us the opportunity to gain extensive operational experience and a deep understanding of the underlying technology.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Our infrastructure is designed from the ground up for security, high availability and to eliminate any single point of failure.
+We use a hybrid of cloud and physical servers. Cloud is used for scalability and high availability, while the physical servers are used to secure sensitive key material.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="https://hubble.figment.network/chains/gaia-9001/validators/E56E00A6B6AC1BE546CE9A9F34C7C1BB7585A8C1" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i> View Gaia-9001
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>How to delegate</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <div class="row control-group">
+                        <div class="col-xs-12 controls">
+                            <p><label>Validator Name: </label> <span>Compass</span></p>
+                            <p><label>Validator Address: </label><span>cosmosvaloper1hk4ze3hqwg62w89gmee3hj72u7wrap0a0lyjj0</span></p>
+                            <p><label>Fee schedule: </label><span>No fees are charged</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--
+      <div class="page-content">
+        <div class="wrap">
+        <div class="home">
+
+  <h1>Postsss</h1>
+
+  <ul class="posts">
+    
+      <li>
+        <span class="post-date">Jul 18, 2018</span>
+        <a class="post-link" href="/freelancer-theme/web%20development/2018/07/18/project-1/">Project 1</a>
+      </li>
+    
+      <li>
+        <span class="post-date">Jul 17, 2018</span>
+        <a class="post-link" href="/freelancer-theme/web%20development/2018/07/17/project-2/">Project 2</a>
+      </li>
+    
+      <li>
+        <span class="post-date">Jul 16, 2018</span>
+        <a class="post-link" href="/freelancer-theme/web%20development/2018/07/16/project-3/">Project 3</a>
+      </li>
+    
+      <li>
+        <span class="post-date">Jul 15, 2018</span>
+        <a class="post-link" href="/freelancer-theme/web%20development/2018/07/15/project-6/">Project 6</a>
+      </li>
+    
+      <li>
+        <span class="post-date">Jul 15, 2018</span>
+        <a class="post-link" href="/freelancer-theme/web%20development/2018/07/15/project-4/">Project 4</a>
+      </li>
+    
+      <li>
+        <span class="post-date">Jul 14, 2018</span>
+        <a class="post-link" href="/freelancer-theme/web%20development/2018/07/14/project-5/">Project 5</a>
+      </li>
+    
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="/freelancer-theme/feed.xml">via RSS</a></p>
+
+</div>
+
+        </div>
+      </div>
+    -->
+
+        <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="index.html#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="index.html#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About</h3>
+                        <p>We are a highly skilled and dedicated team with decades of experience in the fields of software development, highly available IT infrastructure, cryptography and financial services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Compass Validator 2018
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="index.html#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+     <!-- Portfolio Modals -->
+ 
+    <div class="portfolio-modal modal fade" id="portfolioModal-1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project 1</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2018</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project 2</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2018</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project 3</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2018</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project 6</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2018</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project 4</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">April 2018</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal-5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project 5</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="image-alt">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com">November 2018</a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+
+
+    </body>
 </html>
